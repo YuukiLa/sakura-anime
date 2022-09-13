@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sakura_anime/pages/directions/directions_index.dart';
 import 'package:sakura_anime/pages/recommend/recommend_view.dart';
 
 import 'home_logic.dart';
@@ -40,7 +41,7 @@ class HomePage extends GetView<HomeLogic> {
       body: PageView(
         children: [
           RecommendPage(),
-          Container(),
+          DirectionsPage(),
           Container(),
           Container(),
         ],

@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         title: 'Sakura anime',
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Colors.pinkAccent
+        ),
         localizationsDelegates: const [
           RefreshLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,

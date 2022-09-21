@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sakura_anime/common/widgets/keep_alive_wrapper.dart';
 import 'package:sakura_anime/pages/directions/directions_index.dart';
 import 'package:sakura_anime/pages/recommend/recommend_view.dart';
 
@@ -40,8 +41,8 @@ class HomePage extends GetView<HomeLogic> {
       ),
       body: PageView(
         children: [
-          RecommendPage(),
-          DirectionsPage(),
+          KeepAliveWrapper(RecommendPage()),
+          KeepAliveWrapper(DirectionsPage()),
           Container(),
           Container(),
         ],

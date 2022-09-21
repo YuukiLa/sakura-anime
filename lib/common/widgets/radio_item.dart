@@ -10,7 +10,7 @@ class RadioItem extends StatelessWidget {
   Widget build(BuildContext context) {
 
       return Container(
-          color: _item.isSelected ? Theme.of(context).primaryColor.withOpacity(.4) : Colors.white,
+          color: _item.isSelected ? Theme.of(context).primaryColor.withOpacity(.4) : Colors.transparent,
           padding: const EdgeInsets.only(left: 5, right: 5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

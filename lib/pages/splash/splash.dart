@@ -32,6 +32,7 @@ class _SplashState extends State<Splash> {
         color: Colors.blue,
         onPressed: () async {
           Get.offNamed(AppRouter.HOME);
+          // Apis.getFilter();
         },
         child: Text("ios button"),
       ),

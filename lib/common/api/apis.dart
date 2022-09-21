@@ -36,4 +36,22 @@ class Apis {
     return animes;
   }
 
+  static getFilter() async{
+    Document? doc = await _parseDoc("https://www.yhdmp.live/list/");
+    if(doc==null) {
+      return [];
+    }
+    var list = doc.getElementById("search-list")!.children;
+    for(Element element in list) {
+      var ul = element.getElementsByTagName("ul");
+      if(ul.isEmpty) {
+        continue;
+      }
+      var lis = element.getElementsByTagName("ul")[0].children;
+      for (var value in lis) {
+        print(value.getElementsByTagName("a")[0].innerHtml);
+      }
+    }
+  }
+
 }
